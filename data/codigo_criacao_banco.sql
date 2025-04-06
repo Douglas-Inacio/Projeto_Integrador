@@ -63,13 +63,20 @@ INSERT INTO Autor (Nome, Nacionalidade)
 VALUES
 	('Machado de Assis', 'Brasileira'),
 	('Clarice Lispector', 'Brasileira'),
-	('George Orwell', 'Britânico');
+	('George Orwell', 'Britânico'),
+    ('Carlos Drummond de Andrade', 'Brasileiro'),
+    ('Cecília Meireles', 'Brasileira'),
+    ('William Shakespeare', 'Inglaterra'),
+    ('Charles Dickens', 'Inglaterra');
+
 
 INSERT INTO Editora (Nome, Cidade, AnoFundacao) 
 VALUES
 	('Companhia das Letras', 'São Paulo', 1986),
 	('Editora 34', 'Rio de Janeiro', 1992),
-	('Martin Claret', 'São Paulo', 1997);
+	('Martin Claret', 'São Paulo', 1997),
+    ('Editora Rocco', 'Rio de Janeiro', 1992),
+    ('Editora Nova Fronteira', 'Rio de Janeiro', 1965);
 
 INSERT INTO Livro (Titulo, ISBN, AnoPublicacao, EditoraID, Genero) 
 VALUES
@@ -90,7 +97,9 @@ VALUES
 	('Douglas Inacio', 'douglas.inacio@email.com', '(81) 98888-8888', 'Av. Boa Viagem, 500 - Recife/PE'),
 	('Bruno Michel', 'bruno.michel@email.com', '(81) 97777-7777', 'Rua da Aurora, 200 - Recife/PE'),
 	('Arthur Bruno', 'arthur.bruno@email.com', '(81) 96666-6666', 'Rua do Riachuelo, 300 - Recife/PE'),
-	('Hugo William', 'hugo.shogun@email.com', '(81) 95555-5555', 'Av. Conde da Boa Vista, 400 - Recife/PE');
+	('Hugo William', 'hugo.shogun@email.com', '(81) 95555-5555', 'Av. Conde da Boa Vista, 400 - Recife/PE'),
+    ('Gabriel Vitor', 'gabriel.vitor@gmail.com', '(81) 99722-2222', 'Rua Doutor João Santos Filho, 255 - Recife/PE'),
+    ('Lucas França', 'lucasfranca@gmail.com', '(81) 98500-0000', 'Rua Mandacaru, 50 - Recife/PE');
 
 
 INSERT INTO Emprestimo (LivroID, UsuarioID, DataEmprestimo, DataDevolucaoPrevista) VALUES
