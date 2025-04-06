@@ -15,7 +15,22 @@
 
 ## Introdução
 
-Descrever todo o projeto, o que será desenvolvido e qual a finalidade.
+Este projeto foi desenvolvido como parte da disciplina de Projeto Integrador. O objetivo foi criar um sistema que simula o funcionamento de uma biblioteca, permitindo o cadastro de autores, editoras, livros, usuários e o controle de empréstimos.
+
+As tecnologias Utilizadas foram:
+
+- Banco de dados relacional
+- SQL para criar tabelas e estabelecer relacionamentos
+- Git e GitHub para versionamento e gerenciamento colaborativo do projeto
+
+ Tendo as funcionalidades:
+
+- Cadastro de autores, editoras, livros e usuários
+- Controle de empréstimos
+
+Processo de desenvolvimento;
+
+O projeto foi desenvolvido em equipe, utilizando práticas de versionamento com Git e GitHub. Isso permitiu que os integrantes do grupo trabalhassem de forma colaborativa e eficiente.
 
 ## Banco de dados
 
