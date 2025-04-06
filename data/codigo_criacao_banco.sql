@@ -108,8 +108,19 @@ INSERT INTO Emprestimo (LivroID, UsuarioID, DataEmprestimo, DataDevolucaoPrevist
 	(3, 2, '2023-06-03', '2023-06-17');
 
 
+INSERT INTO Usuario (Nome, Email, Telefone, Endereco) 
+VALUES
+('Mariano Silva', 'mariano@email.com', '(81) 99446-9295', 'Rua Primavera, 50 - Recife/PE'),
+	('Anderson Alves', 'anderson@email.com', '(81) 99782-8593', 'Av. Rosarinnho, 350 - Recife/PE'),
+	('Maicon Hernandes', 'maicon@email.com', '(81) 98874-6596', 'Rua Marcos Freire, 78 - Recife/PE')
 
 
+UPDATE Usuario
+SET Nome = 'Lucas França da Silva',
+    Email = 'lucassilva.@gmail.com',
+    Telefone = '(81) 98742-8742',
+    Endereco = 'Rua Rio Branco, 352 -Recife/PE'
+WHERE UsuarioID = 7;
 
 SELECT * FROM Editora;
 SELECT * FROM Livro;
