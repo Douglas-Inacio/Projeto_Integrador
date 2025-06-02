@@ -11,21 +11,24 @@ public class Funcionarios {
         this.conexao = conexao;
     }
 
-    public void criarTabelaFuncionarios() throws Exception {
+   public void criarTabelaFuncionarios() throws Exception {
         String sql = "CREATE TABLE IF NOT EXISTS Funcionarios ("
-                   + "nomeFuncionario VARCHAR(100) NOT NULL)";
-        Statement stmt = conexao.createStatement();
-        stmt.execute(sql);
-        stmt.close();
-        System.out.println("Tabela 'Funcionarios' criada com sucesso!");
+                   + "id INT AUTO_INCREMENT PRIMARY KEY, "
+                   + "nomeFuncionario VARCHAR(100) NOT NULL, "
+                   + "salario DECIMAL(10,2) NOT NULL)";
+        try (Statement stmt = conexao.createStatement()) {
+            stmt.execute(sql);
+            System.out.println("Tabela 'Funcionarios' criada com sucesso!");
+        }
     }
 
-    public void inserirFuncionario(String nome) throws Exception {
-        String sql = "INSERT INTO Funcionarios (nomeFuncionario) VALUES (?)";
-        PreparedStatement stmt = conexao.prepareStatement(sql);
-        stmt.setString(1, nome);
-        stmt.executeUpdate();
-        stmt.close();
-        System.out.println("Funcionário " + nome + " inserido com sucesso!");
+     public void inserirFuncionario(String nome, double salario) throws Exception {
+        String sql = "INSERT INTO Funcionarios (nomeFuncionario, salario) VALUES (?, ?)";
+        try (PreparedStatement stmt = conexao.prepareStatement(sql)) {
+            stmt.setString(1, nome);
+            stmt.setDouble(2, salario);
+            stmt.executeUpdate();
+            System.out.println("Funcionário " + nome + " inserido com salário R$" + salario);
+        }
     }
 }
