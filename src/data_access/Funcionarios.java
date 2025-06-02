@@ -11,6 +11,19 @@ public class Funcionarios {
         this.conexao = conexao;
     }
 
+      package src.data_access;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
+//testandoDeNovo
+public class Funcionarios {
+    private Connection conexao;
+
+    public Funcionarios(Connection conexao) {
+        this.conexao = conexao;
+    }
+
       public void criarTabelaFuncionarios() throws Exception {
         String sql = "CREATE TABLE IF NOT EXISTS Funcionarios ("
                    + "id INT AUTO_INCREMENT PRIMARY KEY, "
